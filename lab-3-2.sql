@@ -41,6 +41,6 @@
 
 SELECT name, AVG(wins)
 FROM teams
-WHERE year>2000
+WHERE year>2001
 GROUP BY name
 ORDER BY name;

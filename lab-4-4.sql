@@ -35,4 +35,13 @@
 -- | Washington Nationals          | Anthony    | Rendon      | 34                   |
 -- +-------------------------------+------------+-------------+----------------------+
 
-
+SELECT name, first_name, last_name, max(home_runs)
+FROM teams
+INNER JOIN stats
+ON teams.id = team_id
+INNER JOIN players
+ON stats.player_id = players.id
+WHERE year = 2019
+GROUP BY name
+ORDER BY name
+;
