@@ -1,2 +1,2 @@
 -- Add a phone number column
-ALTER students ADD phone number
+ALTER TABLE students ADD COLUMN phone_number TEXT;
